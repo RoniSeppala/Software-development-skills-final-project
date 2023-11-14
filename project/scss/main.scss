@@ -1,7 +1,28 @@
-$primary-colour: #333;
-$secondary-colur: rgb(0, 255, 0);
+@import 'config';
 
 body {
+    @include background;
     background-color: $primary-colour;
     color: white;
+    font-family: 'Roboto', sans-serif;
+
 }
+
+h1,
+h2,
+h3 {
+    &.large-heading{
+        font-size: 5rem;
+    }
+
+    &.small-heading {
+        font-size: 2rem;
+    }
+}
+
+.secondary-color-text {
+    color: $secondary-colur;
+}
+
+//import media dependent scss
+@import 'mediaDependent';

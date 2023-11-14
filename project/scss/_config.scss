@@ -1,0 +1,49 @@
+$primary-colour: #333;
+$secondary-colur: rgb(0, 255, 0);
+$bgSource: url(../images/background.jpg);
+$bgOppasity: 0.5;
+
+@mixin background {
+    &#includeBg{
+        background: $bgSource;
+        background-attachment: fixed;
+        background-size: cover;
+
+        &:after{
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: rgba($primary-colour, $bgOppasity);
+        }
+    }
+}
+
+//media querry mixins
+//these configure the media querries for the media dependent scss in the _mobile.scss file
+@mixin mediaSmall {
+    @media (max-width: 500px) {
+
+    }
+}
+
+@mixin mediaMedium {
+    @media (max-width: 750px) {
+
+    }
+}
+
+@mixin mediaLarge {
+    @media (max-width: 1200px) {
+
+    }
+}
+
+@mixin mediaExtraLarge {
+    @media (min-width: 1201px) {
+
+    }
+}
