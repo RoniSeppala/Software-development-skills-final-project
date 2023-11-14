@@ -1,1 +1,1 @@
-course project for SDS front end
+course project for SDS front end.
