@@ -1,4 +1,5 @@
 @import 'config';
+@import 'hamburgerMenuStyling';
 
 html{
     padding: 0;
@@ -37,7 +38,7 @@ h3 {
 main {
     padding: 4rem;
     margin: 0px;
-    min-height: calc(100vh - 8rem);
+    min-height: calc(100vh);
 
     &#home {
         overflow: hidden;
