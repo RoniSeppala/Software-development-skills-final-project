@@ -1,5 +1,5 @@
-$primary-colour: #333;
-$secondary-colur: rgb(0, 255, 0);
+$primary-color: #333;
+$secondary-color: rgb(0, 255, 0);
 $bgSource: url(../images/background.jpg);
 $bgOppasity: 0.5;
 
@@ -17,11 +17,15 @@ $bgOppasity: 0.5;
             width: 100%;
             height: 100%;
             z-index: -1;
-            background: rgba($primary-colour, $bgOppasity);
+            background: rgba($primary-color, $bgOppasity);
         }
     }
 }
 
+//animation
+@mixin animate {
+    transition: all 0.2s ease-in-out;
+}
 //media querry mixins
 //these configure the media querries for the media dependent scss in the _mobile.scss file
 @mixin mediaSmall {

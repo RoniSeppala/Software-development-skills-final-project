@@ -1,18 +1,32 @@
 @import 'config';
 
+html{
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
 body {
     @include background;
-    background-color: $primary-colour;
+    background-color: $primary-color;
     color: white;
     font-family: 'Roboto', sans-serif;
+    height: 100%;
 
 }
 
 h1,
 h2,
 h3 {
+    margin: 0;
+    font-weight: 400;
+
     &.large-heading{
+        font-weight: 400;
         font-size: 5rem;
+
+        .secondary-color-text{
+            font-weight: 800;
+        }
     }
 
     &.small-heading {
@@ -20,8 +34,33 @@ h3 {
     }
 }
 
+main {
+    padding: 4rem;
+    margin: 0px;
+    min-height: calc(100vh - 8rem);
+
+    &#home {
+        overflow: hidden;
+
+        h1 {
+            margin-top: 20vh;
+            margin-bottom: 2vh;
+        }
+    }
+
+    div a i{
+        padding-right: 1rem;
+        padding-top: 0.5rem;
+        color: darken($secondary-color,10);
+        &:hover{
+            color: lighten(invert($primary-color),5);
+            @include animate
+        }
+    }
+}
+
 .secondary-color-text {
-    color: $secondary-colur;
+    color: $secondary-color;
 }
 
 //import media dependent scss
