@@ -11,6 +11,7 @@
         height: 0.5rem;
         margin: 0 0 5px 0;
         background: invert($primary-color);
+        @include animate;
     }
 
     &.cross {
@@ -19,17 +20,14 @@
 
         :nth-child(1){
             transform: rotate(115deg);
-            @include animate;
         }
 
         :nth-child(2){
             transform: rotate(25deg) translate(-5px,-10px);
-            @include animate;
         }
 
         :nth-child(3){
             opacity: 0;
-            @include animate;
         }
     }
 }
@@ -39,29 +37,94 @@
     position: fixed;
     top: 0;
     width: 100%;
-    opacity: 0.8;
     visibility: hidden;
 
     &.show {
         visibility: visible;
     }
 
-    &-branding,
-    &-menu-list {
+    .branding,
+    .menu-list {
         display: flex;
         flex-flow: column wrap;
+        align-items: center;
+        justify-content: center;
+        float: left;
+        width: 50%;
+        height: 100svh;
+        overflow: hidden;
 
     }
 
-    &-menu-list {
+    .menu-list {
         margin: 0;
+        padding: 0;
+        background-color: rgba($primary-color,0.5);
+        list-style: none;
+        transform: translate3d(0, -100%, 0);
+        @include animate;
+
+        &.show {
+            transform: translate3d(0,0,0);
+        }
+
     }
 
-    &-branding {
-        .portrait {
+    .branding {
+        margin: 0;
+        padding: 0;
+        background-color: rgba(lighten($primary-color,10),0.5);//make transparency with alphachannel to have image opaque
+        list-style: none;
+        transform: translate3d(0, 100%, 0);
+        @include animate;
+
+        &.show {
+            transform: translate3d(0,0,0);
+        }
+
+        .portrait-image {
             width: 250px;
             height: 250px;
+            z-index: 40;
             background: url("../images/portrait.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            border-radius: 50%;
+            border: solid 3px $secondary-color;
+        }
+    }
+
+    .menu-item {
+        @include animate;
+        transform: translate3d(600px,0,0);
+
+        &.show {
+            transform: translate3d(0,0,0);
+        }
+
+        &.current > a {
+            color: $secondary-color;
+        }
+    }
+
+    .menu-link {
+        display: inline-block;
+        font-size: 2rem;
+        text-transform: uppercase;
+        padding: 1rem;
+        text-decoration: none;
+        color: white;
+        @include animate
+
+        &:hover {
+            color: $secondary-color;
+        }
+    }
+    // Delay each nav item slide by 0.1s
+    @for $x from 1 through 4 {
+        .menu-item:nth-child(#{$x}) {
+        transition-delay: $x * 0.1s;
         }
     }
 }

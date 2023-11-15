@@ -6,10 +6,68 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+    
         <link rel="stylesheet" href="css/main.css">
         <script src="scrpits/script.js" async defer></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     </head>
-    <body>
+    <body id="includeBg">
+        <header>
+            <div class="hamburger-menu">
+                <div class="menu-line"></div>
+                <div class="menu-line"></div>
+                <div class="menu-line"></div>
+            </div>
 
+            <nav class="menu">
+                <div class="branding">
+                    <div class="portrait-image"></div>
+                </div>
+                <ul class="menu-list">
+                    <li class="menu-item">
+                        <a href="index.html" class="menu-link">Home Page</a>
+                    </li>
+                    <li class="menu-item current">
+                        <a href="aboutMe.html" class="menu-link">
+                            About Me
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="experience.html" class="menu-link">
+                            Experience
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="achievements.html" class="menu-link">
+                            Scientific achivements
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="home">
+            <h1 class="large-heading">
+                J. Robert
+                <span class="secondary-color-text">Oppenheimer</span>
+            </h1>
+            <h2 class="small-heading">Theoretical Physicist and father of the atomic bomb</h2>
+            <div class="iconLinks">
+                <a href="https://scholar.google.com/scholar?hl=fi&as_sdt=0%2C5&q=robert+oppenheimer&btnG=&oq=robert+oppe" id="scientific papers">
+                    <i class="fa fa-book fa-3x"></i>
+                </a>
+                <a href="https://en.wikipedia.org/wiki/Manhattan_Project" id="manhattan project">
+                    <i class="fa fa-atom fa-3x"></i>
+                </a>
+            </div>
+        </main>
+
+        <footer>
+            Page not historically accurate
+        </footer>
     </body>
 </html>
