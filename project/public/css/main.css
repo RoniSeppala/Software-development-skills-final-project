@@ -169,6 +169,8 @@ main {
       height: 250px;
       border-radius: 50%;
       border: solid 1.5px lime; }
+  main#experience h2.small-heading {
+    padding-top: 1rem; }
   main div a i {
     padding-right: 1rem;
     padding-top: 0.5rem;
