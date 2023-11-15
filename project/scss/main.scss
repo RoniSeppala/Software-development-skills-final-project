@@ -37,8 +37,8 @@ h3 {
 }
 
 main {
-    padding: 4rem;
     margin: 0px;
+    padding: 4rem;
     min-height: calc(100vh - 8rem - 40px);
 
     &#home {
@@ -47,6 +47,52 @@ main {
         h1 {
             margin-top: 20vh;
             margin-bottom: 2vh;
+        }
+    }
+
+    &#about {
+        h1.large-heading {
+            padding-top: 5rem;
+        }
+        h2.small-heading {
+            padding-top: 1rem;
+            font-size: 3rem;
+        }
+
+        .about-info{
+
+            display: grid;
+            grid-gap: 30px;
+            grid-template-areas:
+                "portrait bio bio"
+                "notable-1 notable-2 notable-3";
+
+            .portrait{
+                grid-area: portrait;
+            }
+
+            .biography {
+                grid-area: bio;
+            }
+
+            .notable-1 {
+                grid-area: notable-1;
+            }
+
+            .notable-2 {
+                grid-area: notable-2;
+            }
+
+            .notable-3 {
+                grid-area: notable-3;
+            }
+            
+            img {
+                width: 250px;
+                height: 250px;
+                border-radius: 50%;
+                border: solid 1.5px $secondary-color;
+            }
         }
     }
 

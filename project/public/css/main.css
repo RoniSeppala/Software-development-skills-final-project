@@ -65,7 +65,7 @@
       background-size: cover;
       background-position: center;
       border-radius: 50%;
-      border: solid 3px lime; }
+      border: solid 1.5px lime; }
   .menu .menu-item {
     transition: all 0.4s ease-in-out;
     transform: translate3d(600px, 0, 0); }
@@ -137,14 +137,38 @@ h3 {
     font-size: 2rem; }
 
 main {
-  padding: 4rem;
   margin: 0px;
+  padding: 4rem;
   min-height: calc(100vh - 8rem - 40px); }
   main#home {
     overflow: hidden; }
     main#home h1 {
       margin-top: 20vh;
       margin-bottom: 2vh; }
+  main#about h1.large-heading {
+    padding-top: 5rem; }
+  main#about h2.small-heading {
+    padding-top: 1rem;
+    font-size: 3rem; }
+  main#about .about-info {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-areas: "portrait bio bio" "notable-1 notable-2 notable-3"; }
+    main#about .about-info .portrait {
+      grid-area: portrait; }
+    main#about .about-info .biography {
+      grid-area: bio; }
+    main#about .about-info .notable-1 {
+      grid-area: notable-1; }
+    main#about .about-info .notable-2 {
+      grid-area: notable-2; }
+    main#about .about-info .notable-3 {
+      grid-area: notable-3; }
+    main#about .about-info img {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      border: solid 1.5px lime; }
   main div a i {
     padding-right: 1rem;
     padding-top: 0.5rem;
