@@ -1,0 +1,125 @@
+@include mediaSmall {
+    main {
+        max-width: 100%;
+        h1.large-heading {
+            font-size: 4rem;
+            text-align: center;
+        }
+
+        h2.small-heading {
+            font-size: 1.5rem;
+        }
+
+        &#about {
+            .about-info {
+                grid-template-areas:
+                    "portrait"
+                    "bio"
+                    "notable-1"
+                    "notable-2"
+                    "notable-3";
+            }
+        }
+    }
+}
+
+@include mediaMedium {
+    .menu {
+        .branding,
+        .menu-list {
+            float: none;
+            width: 100%;
+            min-height: 0;
+
+            &.show {
+                transform: translate3d(0,0,0);
+            }
+        }
+
+        .menu-list {
+            height: 75dvh ;
+            width: 100%;
+            transform: translate3d(-100%,0,0);
+            font-size: 1rem;
+        }
+
+        .branding {
+            height: 25dvh;
+            width: 100%;
+            transform: translate3d(100%,0,0);
+
+            .portrait-image {
+                width: 150px;
+                height: 150px;
+            }
+        }
+    }
+    main {
+        &#about {
+            .about-info {
+                grid-template-columns: 1fr 1.5fr;
+                grid-template-areas:
+                    "portrait bio"
+                    "notable-1 notable-1"
+                    "notable-2 notable-2"
+                    "notable-3 notable-3";
+
+                img {
+                    max-width: 30vw;
+                    max-height: 30vw;
+                }
+            }
+        }
+
+        &#manhattan {
+            img {
+                width: 98%;
+            }
+            a {
+                flex-direction: column;
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+
+        &#popularWorks {
+            .contentArea{
+                grid-template-columns: 1fr;
+                column-gap: 1px;
+                grid-template-areas:
+                    "content1"
+                    "content2"
+                    "content3"
+                    "content4";
+            }
+
+            .epmty1,
+            .empty2 {
+                width: 1vw;
+            }
+        }
+    }
+}
+
+@include mediaLarge {
+    main {
+        &#about {
+            .about-info {
+                grid-template-columns: 1fr 1fr;
+                grid-template-areas:
+                    "portrait bio"
+                    "notable-1 notable-1"
+                    "notable-2 notable-3";
+
+                img {
+                    max-width: 30vw;
+                    max-height: 30vw;
+                }
+            }
+        }
+    }
+}
+
+@include mediaExtraLarge {
+
+}
