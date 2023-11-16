@@ -1,4 +1,4 @@
-The final course project for SDS front end.
+The final course project for SDS front end by Roni Seppälä
 
 The page can be either run, but cloning the repository onto your local machine and opening the index.html in public folder, or by going to https://roniseppala.github.io/Software-development-skills-final-project/index.html
 
