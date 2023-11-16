@@ -1,5 +1,5 @@
 .hamburger-menu {
-  position: absolute;
+  position: fixed;
   z-index: 3;
   right: 35px;
   top: 35px;
@@ -289,7 +289,18 @@ footer {
   background-color: gray;
   height: 10px; }
 
-@media (max-width: 500px) {
+@media screen and (max-width: 500px) {
+  main {
+    max-width: 100%; }
+    main h1.large-heading {
+      font-size: 4rem;
+      text-align: center; }
+    main h2.small-heading {
+      font-size: 1.5rem; }
+    main#about .about-info {
+      grid-template-areas: "portrait" "bio" "notable-1" "notable-2" "notable-3"; } }
+
+@media screen and (max-width: 750px) {
   .menu .branding,
   .menu .menu-list {
     float: none;
@@ -310,24 +321,30 @@ footer {
     .menu .branding .portrait-image {
       width: 150px;
       height: 150px; }
-  main {
-    max-width: 100%; }
-    main h1.large-heading {
-      font-size: 4rem;
-      text-align: center; }
-    main h2.small-heading {
-      font-size: 1.5rem; }
-    main#about .about-info {
-      grid-template-areas: "portrait" "bio" "notable-1" "notable-2" "notable-3"; }
-    main#manhattan img {
-      width: 98%; }
-    main#manhattan a {
-      flex-direction: column;
-      margin-left: 0;
-      margin-right: 0; }
-    main#popularWorks .contentArea {
-      grid-template-areas: "content1 content1 content1" "content2 content2 content2" "content3 content3 content3" "content4 content4 content4"; } }
+  main#about .about-info {
+    grid-template-columns: 1fr 1.5fr;
+    grid-template-areas: "portrait bio" "notable-1 notable-1" "notable-2 notable-2" "notable-3 notable-3"; }
+    main#about .about-info img {
+      max-width: 30vw;
+      max-height: 30vw; }
+  main#manhattan img {
+    width: 98%; }
+  main#manhattan a {
+    flex-direction: column;
+    margin-left: 0;
+    margin-right: 0; }
+  main#popularWorks .contentArea {
+    grid-template-columns: 1fr;
+    column-gap: 1px;
+    grid-template-areas: "content1" "content2" "content3" "content4"; }
+  main#popularWorks .epmty1,
+  main#popularWorks .empty2 {
+    width: 1vw; } }
 
-@media screen and (min-width: 501px) and (max-width: 750px) {
-  .main#about .about-info {
-    grid-template-areas: "portrait bio" "notable-1" "notable-2" "notable-3"; } }
+@media (max-width: 1200px) {
+  main#about .about-info {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "portrait bio" "notable-1 notable-1" "notable-2 notable-3"; }
+    main#about .about-info img {
+      max-width: 30vw;
+      max-height: 30vw; } }
