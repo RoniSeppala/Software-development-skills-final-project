@@ -94,8 +94,7 @@
 
 html {
   padding: 0;
-  margin: 0;
-  overflow: hidden; }
+  margin: 0; }
 
 body {
   background-color: #333;
@@ -171,6 +170,23 @@ main {
       border: solid 1.5px lime; }
   main#experience h2.small-heading {
     padding-top: 1rem; }
+  main#experience img {
+    height: 250px;
+    width: 250px;
+    object-fit: cover;
+    border: solid 5px #333;
+    margin-right: 5px; }
+  main#experience a {
+    display: flex;
+    margin: 3rem;
+    border: solid 3px lime;
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+    background-color: #4d4d4d; }
+    main#experience a h3 {
+      text-transform: uppercase;
+      text-align: center; }
   main div a i {
     padding-right: 1rem;
     padding-top: 0.5rem;
@@ -188,7 +204,8 @@ footer {
   color: #999999;
   padding: 10px;
   padding-bottom: 20px;
-  background-color: gray; }
+  background-color: gray;
+  height: 10px; }
 
 /*@include mediaSmall {
     

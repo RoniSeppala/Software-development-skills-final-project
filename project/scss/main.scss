@@ -4,7 +4,6 @@
 html{
     padding: 0;
     margin: 0;
-    overflow: hidden;
 }
 body {
     @include background;
@@ -100,6 +99,29 @@ main {
         h2.small-heading {
             padding-top: 1rem;
         }
+
+        img {
+            height: 250px;
+            width: 250px;
+            object-fit: cover;
+            border: solid 5px $primary-color;
+            margin-right: 5px;;
+        }
+
+        a{
+            display: flex;
+            margin: 3rem;
+            border: solid 3px $secondary-color;
+            text-decoration: none;
+            color: white;
+            padding: 1rem;
+            background-color: lighten($primary-color,10);
+
+            h3 {
+                text-transform: uppercase;
+                text-align: center;
+            }
+        }
     }
 
     div a i{
@@ -124,6 +146,7 @@ footer {
     padding: 10px;
     padding-bottom: 20px;
     background-color: lighten($primary-color,30);
+    height: 10px;
 
 }
 //import media dependent scss
