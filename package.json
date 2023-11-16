@@ -1,0 +1,25 @@
+{
+  "name": "sds-frontend",
+  "version": "1.0.0",
+  "description": "end project for Software Development Skills: front-end -course",
+  "main": "index.js",
+  "homepage": "https://roniseppala.github.io/2oftware-development-skills-final-project",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "node-sass -w  project/scss/ -o project/public/css/ --recursive",
+    "deploy": "gh-pages -d project/public"
+  },
+  "author": "Roni Seppälä",
+  "license": "ISC",
+  "dependencies": {
+    "gh-pages": "^6.0.0",
+    "node-sass": "^9.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RoniSeppala/Software-development-skills-final-project.git"
+  },
+  "bugs": {
+    "url": "https://github.com/RoniSeppala/Software-development-skills-final-project/issues"
+  }
+}
