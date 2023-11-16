@@ -6,8 +6,8 @@
   "homepage": "https://roniseppala.github.io/software-development-skills-final-project",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "node-sass -w  project/scss/ -o project/public/css/ --recursive",
-    "deploy": "gh-pages -d project/public -r https://github.com/RoniSeppala/Software-development-skills-final-project"
+    "sass": "node-sass -w  scss/ -o public/css/ --recursive",
+    "deploy": "gh-pages -d public  -r https://github.com/RoniSeppala/Software-development-skills-final-project.git"
   },
   "author": "Roni Seppälä",
   "license": "ISC",
