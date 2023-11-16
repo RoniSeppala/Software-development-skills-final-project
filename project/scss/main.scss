@@ -124,6 +124,64 @@ main {
         }
     }
 
+    &#popularWorks {
+        h1,
+        h2 {
+            padding-left: 5rem;
+        }
+
+        h2.small-heading {
+            padding-top: 2rem;
+        }
+
+        .contentArea {
+            display: grid;
+            padding-top: 4rem;
+            grid-column-gap: 90px;
+            grid-row-gap: 20vh;
+            grid-template-areas:
+                "content1 content1 empty1"
+                "empty2 content2 content2"
+                "content3 content3 empty3"
+                "empty4 content4 content4";
+
+                .content1 {
+                    grid-area: content1;
+                }
+
+                .empty1 {
+                    grid-area: empty1;
+                    width: 20vw;
+                    visibility: hidden;
+                }
+                .content2 {
+                    grid-area: content2;
+                }
+
+                .empty2 {
+                    grid-area: empty2;
+                    width: 20vw;
+                    visibility: hidden;
+                }
+                .content3 {
+                    grid-area: content3;
+                }
+
+                .empty3 {
+                    grid-area: empty3;
+                    visibility: hidden;
+                }
+                .content4 {
+                    grid-area: content4;
+                }
+
+                .empty4 {
+                    grid-area: empty4;
+                    visibility: hidden;
+                }
+        }
+    }
+
     div a i{
         padding-right: 1rem;
         padding-top: 0.5rem;

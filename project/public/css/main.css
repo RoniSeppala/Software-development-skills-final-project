@@ -103,19 +103,32 @@ body {
   height: 100%;
   padding: 0;
   margin: 0; }
-  body#includeBg {
+  body#includeBgMain {
     background: url(../images/background.jpg);
     background-attachment: fixed;
     background-size: cover; }
-    body#includeBg:after {
+    body#includeBgMain:after {
       content: '';
-      position: absolute;
+      position: fixed;
       top: 0;
       right: 0;
       width: 100%;
       height: 100%;
-      z-index: -1;
+      z-index: -2;
       background: rgba(51, 51, 51, 0.5); }
+  body#includeBgPop {
+    background: url(../images/background2.jpg);
+    background-attachment: fixed;
+    background-size: cover; }
+    body#includeBgPop:after {
+      content: '';
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -2;
+      background: rgba(64, 64, 64, 0.8); }
 
 h1,
 h2,
@@ -187,6 +200,39 @@ main {
     main#experience a h3 {
       text-transform: uppercase;
       text-align: center; }
+  main#popularWorks h1,
+  main#popularWorks h2 {
+    padding-left: 5rem; }
+  main#popularWorks h2.small-heading {
+    padding-top: 2rem; }
+  main#popularWorks .contentArea {
+    display: grid;
+    padding-top: 4rem;
+    grid-column-gap: 90px;
+    grid-row-gap: 20vh;
+    grid-template-areas: "content1 content1 empty1" "empty2 content2 content2" "content3 content3 empty3" "empty4 content4 content4"; }
+    main#popularWorks .contentArea .content1 {
+      grid-area: content1; }
+    main#popularWorks .contentArea .empty1 {
+      grid-area: empty1;
+      width: 20vw;
+      visibility: hidden; }
+    main#popularWorks .contentArea .content2 {
+      grid-area: content2; }
+    main#popularWorks .contentArea .empty2 {
+      grid-area: empty2;
+      width: 20vw;
+      visibility: hidden; }
+    main#popularWorks .contentArea .content3 {
+      grid-area: content3; }
+    main#popularWorks .contentArea .empty3 {
+      grid-area: empty3;
+      visibility: hidden; }
+    main#popularWorks .contentArea .content4 {
+      grid-area: content4; }
+    main#popularWorks .contentArea .empty4 {
+      grid-area: empty4;
+      visibility: hidden; }
   main div a i {
     padding-right: 1rem;
     padding-top: 0.5rem;
