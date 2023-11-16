@@ -7,7 +7,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "sass": "node-sass -w  project/scss/ -o project/public/css/ --recursive",
-    "deploy": "gh-pages -d project/public"
+    "deploy": "gh-pages -d project/public -r https://github.com/RoniSeppala/Software-development-skills-final-project"
   },
   "author": "Roni Seppälä",
   "license": "ISC",
