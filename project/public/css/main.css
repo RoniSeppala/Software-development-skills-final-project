@@ -68,7 +68,7 @@
       border: solid 1.5px lime; }
   .menu .menu-item {
     transition: all 0.4s ease-in-out;
-    transform: translate3d(600px, 0, 0); }
+    transform: translate3d(200%, 0, 0); }
     .menu .menu-item.show {
       transform: translate3d(0, 0, 0); }
     .menu .menu-item.current > a {
@@ -91,6 +91,8 @@
     transition-delay: 0.3s; }
   .menu .menu-item:nth-child(4) {
     transition-delay: 0.4s; }
+  .menu .menu-item:nth-child(5) {
+    transition-delay: 0.5s; }
 
 html {
   padding: 0;
@@ -181,15 +183,20 @@ main {
       height: 250px;
       border-radius: 50%;
       border: solid 1.5px lime; }
-  main#experience h2.small-heading {
+  main#manhattan h2.small-heading {
     padding-top: 1rem; }
-  main#experience img {
-    height: 250px;
+  main#manhattan h6 {
+    text-align: center;
+    font-size: 1rem;
+    padding: 0;
+    margin: 1rem; }
+  main#manhattan img {
     width: 250px;
+    max-height: 40vh;
     object-fit: cover;
     border: solid 5px #333;
     margin-right: 5px; }
-  main#experience a {
+  main#manhattan a {
     display: flex;
     margin: 3rem;
     border: solid 3px lime;
@@ -197,7 +204,7 @@ main {
     color: white;
     padding: 1rem;
     background-color: #4d4d4d; }
-    main#experience a h3 {
+    main#manhattan a h3 {
       text-transform: uppercase;
       text-align: center; }
   main#popularWorks h1,
@@ -233,6 +240,34 @@ main {
     main#popularWorks .contentArea .empty4 {
       grid-area: empty4;
       visibility: hidden; }
+  main#aboutPage h1 {
+    text-align: center; }
+  main#aboutPage div {
+    padding-top: 3rem; }
+  main#aboutPage h3 {
+    text-align: center;
+    padding-top: 5rem;
+    padding-bottom: 1rem;
+    font-size: 3rem; }
+  main#aboutPage h4 {
+    padding-top: 10rem;
+    padding-left: 2rem;
+    padding-bottom: 1rem;
+    margin: 0;
+    font-weight: 400;
+    font-size: 3rem; }
+  main#aboutPage p {
+    text-align: center; }
+  main#aboutPage li {
+    list-style: none;
+    padding-bottom: 1rem; }
+    main#aboutPage li a {
+      text-decoration: none; }
+  main#aboutPage a {
+    color: white; }
+    main#aboutPage a:hover {
+      color: blue;
+      transition: all 0.4s ease-in-out; }
   main div a i {
     padding-right: 1rem;
     padding-top: 0.5rem;

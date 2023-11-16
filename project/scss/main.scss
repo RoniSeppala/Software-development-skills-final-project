@@ -95,14 +95,21 @@ main {
         }
     }
 
-    &#experience {
+    &#manhattan {
         h2.small-heading {
             padding-top: 1rem;
         }
 
+        h6 {
+            text-align: center;
+            font-size: 1rem;
+            padding: 0;
+            margin: 1rem;
+        }
+
         img {
-            height: 250px;
             width: 250px;
+            max-height: 40vh;
             object-fit: cover;
             border: solid 5px $primary-color;
             margin-right: 5px;;
@@ -179,6 +186,55 @@ main {
                     grid-area: empty4;
                     visibility: hidden;
                 }
+        }
+    }
+
+    &#aboutPage {
+
+        h1 {
+        text-align: center;
+        }
+
+        div {
+            padding-top: 3rem;
+        }
+
+        h3 {
+            text-align: center;
+            padding-top: 5rem;
+            padding-bottom: 1rem;
+            font-size: 3rem;
+        }
+
+        h4 {
+            padding-top: 10rem;
+            padding-left: 2rem;
+            padding-bottom: 1rem;
+
+            margin: 0;
+            font-weight: 400;
+
+            font-size: 3rem;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        li {
+            list-style:none;
+            padding-bottom: 1rem;
+            a {
+            text-decoration: none;
+            }
+        }
+
+        a {
+            color: white;
+            &:hover {
+                color: blue;
+                @include animate
+            }
         }
     }
 
